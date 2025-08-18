@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/indexStyles.css">
+</head>
+<body>
+    <h1 class="pageTitle">Messages</h1>
+    <div class="messageBox">
+        <ul class="messageList">
+            <% for (let i = 0; i < messages.length; i++) { %>
+                <% const message = messages[i] %>
+                <li class="messageItem">
+                    <p class="userMessage"> <%= message.user %> </p>
+                    <p class="messageText"> <%= message.text %> </p>
+                    <p class="messageDate"> <%= message.added %> </p>
+                    <a href=<%= `/message/${i}` %>>Details</a>
+                </li>
+            <% } %>
+        </ul>
+    </div>
+    <a href="/new">send message</a>
+</body>
+</html>

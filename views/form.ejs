@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>New Message</h1>
+    <div class="formContainer">
+        <form method="POST" action="/new">
+            <div class="formInputs">
+                <label for="sendFrom">From: </label>
+                <input type="text" id="sendFrom" name="sendFrom">
+                <label for="sendTo">To: </label>
+                <input type="text" id="sendTo" name="sendTo">
+                <label for="messageInputBox">Message: </label>
+                <textarea name="messageText" id="messageInputBox"></textarea>
+            </div>
+            <button type="submit" class="submitMessageForm">Submit</button>
+        </form>
+    </div>
+    <a href="/">See all messages</a>
+</body>
+</html>
